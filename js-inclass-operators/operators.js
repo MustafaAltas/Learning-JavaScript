@@ -111,3 +111,22 @@ console.log(a ?? b);  //a
 
 var c = 1;
 console.log(c ?? "Null veya undefined");  //1 değerini döndürür.
+
+//------ null ve NaN olanda ifade varsa "??" ile işleme sokulur ve karşılığı alttaki sonuçlar gibi olur .
+console.log(null ?? NaN);  // her durumda NaN döner 
+console.log(NaN ?? null);  // her durumda NaN döner 
+
+var a ;
+
+console.log(a ?? "undefined");  // undefine döner 
+
+var b = null;
+
+console.log("null değeri almış" ?? b);  // "null değeri almış ifadesi döner."
+
+
+console.log("object" ?? 2);  // object
+console.log(2 ?? "object");  // 2
+
+console.log("object" || 2); 
+console.log(2 || "object");
